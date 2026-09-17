@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cipherward-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - cipherward_postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: cipherward-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  cipherward_postgres:
