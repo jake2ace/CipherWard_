@@ -1,0 +1,35 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Go
+backend/bin/
+backend/tmp/
+backend/coverage.out
+
+# Node / frontend
+web/node_modules/
+web/dist/
+web/.vite/
+
+# Build output
+build/
+dist/
+out/
+
+# Local data
+.data/
+postgres-data/
+redis-data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
